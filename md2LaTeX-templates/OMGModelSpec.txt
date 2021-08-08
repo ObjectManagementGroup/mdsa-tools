@@ -1,0 +1,4 @@
+#parse("OMGLaTeXStyle.txt")
+#foreach($p in $Package)
+$file.create("OMGPackage.txt", "${p.name}.tex", $p)
+#end

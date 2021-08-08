@@ -1,0 +1,72 @@
+% !TEX TS-program = xelatex
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL base.tex   Thu Nov 15 17:44:24 2018
+%DIF ADD rev.tex    Thu Nov 15 17:42:33 2018
+%
+% Created by Jason McC. Smith on 2018-11-14.
+% Copyright (c) 2018 .
+\documentclass{article}
+
+\usepackage{polyglossia}
+\usepackage{hyperref}
+
+\hypersetup
+{
+  pdftitle   = {Title},
+  pdfsubject = {Subject},
+  pdfauthor  = {Jason McC. Smith}
+}
+
+\title{Title}
+\author{Jason McC. Smith}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF CHANGEBAR PREAMBLE %DIF PREAMBLE
+\RequirePackage[pdftex]{changebar} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{\protect\cbstart{#1}\protect\cbend} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{\protect\cbdelete} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Abstract
+\end{abstract}
+
+\section{Introduction}
+\DIFdelbegin \DIFdel{This is the base }\DIFdelend \DIFaddbegin \DIFadd{And this is the revised }\DIFaddend document
+It may \DIFdelbegin \DIFdel{need more work
+}\DIFdelend \DIFaddbegin \DIFadd{be done
+}\DIFaddend 
+
+
+\subsection{Empty File}
+Success!!
+
+
+
+%
+\subsection{NonEmpty File}
+What a frabjulous day!%
+
+
+\end{document}
+

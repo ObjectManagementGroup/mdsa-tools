@@ -1,0 +1,122 @@
+% !TEX TS-program = xelatex
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL base.tex   Thu Nov 15 17:44:24 2018
+%DIF ADD rev.tex    Thu Nov 15 17:42:33 2018
+%
+% Created by Jason McC. Smith on 2018-11-14.
+% Copyright (c) 2018 .
+\documentclass{article}
+
+\usepackage{polyglossia}
+\usepackage{hyperref}
+
+\hypersetup
+{
+  pdftitle   = {Title},
+  pdfsubject = {Subject},
+  pdfauthor  = {Jason McC. Smith}
+}
+
+\title{Title}
+\author{Jason McC. Smith}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%% Start of content %DIF PREAMBLE
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF CCHANGEBAR PREAMBLE %DIF PREAMBLE
+\RequirePackage[dvips,leftbars]{changebar} %DIF PREAMBLE
+\changebarsep=\marginparwidth  %DIF PREAMBLE
+\changebarwidth=2pt %DIF PREAMBLE
+\deletebarwidth=8pt %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{\protect\cbstart{\protect\color{blue}#1}\protect\cbend} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{\protect\cbdelete{\protect\color{red}#1}\protect\cbdelete} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF LISTINGS PREAMBLE %DIF PREAMBLE
+\lstdefinelanguage{codediff}{ %DIF PREAMBLE
+  moredelim=**[is][\color{red}]{*!----}{----!*}, %DIF PREAMBLE
+  moredelim=**[is][\color{blue}]{*!++++}{++++!*} %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{codediff}{ %DIF PREAMBLE
+	belowcaptionskip=.25\baselineskip, %DIF PREAMBLE
+	language=codediff, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true, %DIF PREAMBLE
+} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF LISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_CFONT %DIF PREAMBLE
+  moredelim=[il][\color{red}\scriptsize]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\sffamily]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Abstract
+\end{abstract}
+
+\section{Introduction}
+\DIFdelbegin \DIFdel{This is the }%DIFDELCMD < \mycomment{base document}{Change this!}
+%DIFDELCMD < %%%
+\DIFdel{It may need }%DIFDELCMD < \mycomment
+%DIFDELCMD < [%%%
+\DIFdel{ME}%DIFDELCMD < ]
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \DIFadd{And this is the }\mycomment[ME]{revised document}{much better}
+\DIFadd{It may }\mycomment{be done}{Yay!}
+
+\iffileemptyelse
+\DIFaddend {\DIFdelbegin \DIFdel{more work}\DIFdelend \DIFaddbegin \DIFadd{Empty}\DIFaddend }
+{
+\DIFdelbegin \DIFdel{Ya think?}\DIFdelend \DIFaddbegin \subsection{\DIFadd{Empty File}}
+\DIFadd{Success!!
+}\DIFaddend }
+\DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < \iffileemptyelse{Empty}{
+%DIFDELCMD < \subsection{Empty File}
+%DIFDELCMD < Success!!
+%DIFDELCMD < }{----ERROR----}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin {\DIFadd{----ERROR----}}
+\DIFaddend 
+
+
+\iffileemptyelse{NonEmpty}{----ERROR----}{%
+\subsection{NonEmpty File}
+What a frabjulous day!
+%
+}
+
+
+\end{document}
+

@@ -1,0 +1,85 @@
+#macro( checkDoc $doc )
+#if ($doc == ""){\itshape \color{red}FILL IN DOCUMENTATION}#else$doc#end
+#end
+#macro( checkToDo $elem )#set($toDoTxt = "$elem.toDo") #if($toDoTxt != ""){\itshape\color{red}$toDoTxt}#end#end
+#macro( multiplicity $a )## Extract the multiplicity of an attribute
+#if($a.lowerValue) {[$a.lowerValue.value#if($a.upperValue and $a.upperValue.value != $a.lowerValue.value)..#if($a.upperValue.value==-1)*#{else}$a.upperValue.value#end#end]}#end#if($a.isOrdered) \{ordered\}#end#end
+##
+#macro( gendesclist $myList $title)## Create a description table for a list of attributes
+#if($list.size($myList) > 0)\begin{$title}
+#foreach ($a in $myList)
+    \item [$a.name : $a.type.name#multiplicity($a)] #checkDoc($a.documentation) #checkToDo($a)
+
+#end
+\end{$title}
+#end
+#end
+#macro( emitDiagram $d )
+#set($diagfile = "${d.name}")
+#set($svgfile = "${diagfile}.svg")
+%$file.copy("$d.image", $svgfile)
+\begin{figure}[htbp]\centering\includesvg[width=\linewidth]{$diagfile}\caption{#checkDoc($d.documentation)}\label{figure$d.name}\end{figure}
+#end
+
+#macro( emitClass $class )
+\omgclass{$class.name#if($class.isAbstract) (Abstract)#end}\label{class${class.name}}
+#checkDoc($class.documentation)
+#checkToDo($class)
+
+
+#if($list.size($class.generalization) > 0)\begin{omggeneralizations}
+#foreach ($g in $class.generalization)
+    \item [#foreach ($t in $g.target)$t.name#end] $g.documentation #checkToDo($g)
+
+#end
+\end{omggeneralizations}
+#end
+
+## Split up the attributes into the appropriate bins, then emit each list
+#set( $assocs = [] )
+#set( $assocsreq = [] )
+#set( $assocsopt = [] )
+#set( $attribs = [] )
+#set( $attribsreq = [] )
+#set( $attribsopt = [] )
+#set( $emptylist = [] )
+#foreach ($a in $sorter.sort($class.attribute))
+#if($a.association)#set($eatit = $assocs.add($a))
+#else#set( $eatit = $attribs.add($a))
+#end
+#end
+#foreach ($a in $assocs)
+#if($a.name != "")
+#if($a.lowerValue.value==0)#set($eatit = $assocsopt.add($a))
+#else#set( $eatit = $assocsreq.add($a))
+#end
+#end
+#end
+#foreach ($a in $attribs)
+#if($a.name != "")
+#if($a.lowerValue.value==0)#set($eatit = $attribsopt.add($a))
+#else#set( $eatit = $attribsreq.add($a))
+#end
+#end
+#end
+##
+#gendesclist($attribsreq, "omgattrreq")
+#gendesclist($attribsopt, "omgattropt")
+##
+#gendesclist($assocsreq, "omgassocreq")
+#gendesclist($assocsopt, "omgassocopt")
+
+#set($allElems = $class.ownedElement)
+#set($constraints = [])
+#foreach($e in $allElems)
+#if($e.classType.name == "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Constraint")
+#set( $eatit = $constraints.add($e))
+#end
+#end
+#if($list.size($constraints) > 0)\begin{omgconstraints}
+#foreach ($c in $constraints)
+    \item [{$c.name : $c.specification.body}] #checkDoc($c.documentation) #checkToDo($c)
+#end
+\end{omgconstraints}
+#end
+#end

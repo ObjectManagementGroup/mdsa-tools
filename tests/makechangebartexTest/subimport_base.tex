@@ -1,0 +1,29 @@
+% !TEX TS-program = xelatex
+%
+\documentclass{article}
+
+\usepackage{import}
+
+\title{Title}
+\author{Authorname}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Abstract
+\end{abstract}
+
+\section{Introduction}
+This is the base document
+It may need more work
+
+\subsection{NonEmpty File (subimport)}
+\subimport{subimportDir/}{NonEmpty}%
+
+\subsection{NonEmpty File (import)}
+\import{./}{NonEmpty}%
+
+\end{document}
+

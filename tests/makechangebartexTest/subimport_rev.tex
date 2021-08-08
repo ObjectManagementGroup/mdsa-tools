@@ -1,0 +1,30 @@
+% !TEX TS-program = xelatex
+%
+% Created by Jason McC. Smith on 2018-11-14.
+% Copyright (c) 2018 .
+\documentclass{article}
+
+\usepackage{import}
+
+\title{Title}
+\author{Authorname}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Abstract
+\end{abstract}
+
+\section{Introduction}
+And this is the revised document
+It may be done
+
+\subsection{NonEmpty File (subimport)}
+\subimport{subimportDir/}{NonEmpty}%
+
+\subsection{NonEmpty File (import)}
+\import{./}{NonEmpty}%
+
+\end{document}

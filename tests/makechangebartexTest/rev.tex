@@ -1,0 +1,47 @@
+% !TEX TS-program = xelatex
+%
+% Created by Jason McC. Smith on 2018-11-14.
+% Copyright (c) 2018 .
+\documentclass{article}
+
+\usepackage{polyglossia}
+\usepackage{hyperref}
+\usepackage{import}
+
+\hypersetup
+{
+  pdftitle   = {Title},
+  pdfsubject = {Subject},
+  pdfauthor  = {Jason McC. Smith}
+}
+
+\title{Title}
+\author{Jason McC. Smith}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Abstract
+\end{abstract}
+
+\section{Introduction}
+And this is the \mycomment[ME]{revised document}{much better}
+It may \mycomment{be done}{Yay!}
+
+\iffileemptyelse
+{Empty}
+{
+\subsection{Empty File}
+Success!!
+}
+{----ERROR----}
+
+
+\iffileemptyelse{NonEmpty}{----ERROR----}{%
+\subsection{NonEmpty File}
+\input{NonEmpty}%
+}
+
+\end{document}

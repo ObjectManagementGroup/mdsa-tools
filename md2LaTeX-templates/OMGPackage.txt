@@ -1,0 +1,12 @@
+#parse("OMGLaTeXStyle.txt")
+#foreach ($d in $Diagram)
+#if ($foreach.first)
+#checkDoc ($d.owner.documentation) #checkToDo($d.owner)
+
+#end
+#emitDiagram($d)
+#end
+
+#foreach ($class in $sorter.sort($Class, "name"))
+#emitClass($class)
+#end
