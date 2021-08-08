@@ -1,5 +1,5 @@
-OMG MDSA
-==============
+OMG MDSA - TOOLS
+================
 Collection of tools to produce OMG specification process related documents in LaTeX directly from models created in modeling tools.
 
 This is an example of what OMG terms Model-Driven Specification Authoring (MDSA).  The expectation is that this toolkit will grow to 
@@ -35,10 +35,10 @@ There are currently two tools:
 
 To Install
 ==========
-1. Clone this repository from github: `git clone repo https://github.com/ObjectManagementGroup/MDSA.git`
+1. Clone this repository from github: `git clone repo https://github.com/ObjectManagementGroup/LaTeXTools.git`
 2. Install contents of `./omgmdsa/md2LaTeX-templates/` folder into MagicDraw as Report templates as per MagicDraw documentation for ReportWizard
 
-If you want to install most simply, `cd MDSA; python setup.py` and it will take care of the dependencies, and create a proper executable wrapper 
+If you want to install most simply, `cd LaTeXTools; python setup.py` and it will take care of the dependencies, and create a proper executable wrapper 
 around each of the tools for you.
 
 If you want to evoke the scripts more manually, you will need to install two modules into Python: click, and errutils.  Click is available via pip, 
@@ -72,7 +72,7 @@ md2LaTeX
 To Configure
 ------------
 
-To use md2LaTeX to produce OMG specification process documents, you need to specify what MagicDraw file it needs to process, what packages 
+To use `md2LaTeX` to produce OMG specification process documents, you need to specify what MagicDraw file it needs to process, what packages 
 it should process, and where the output should go.
 
 
@@ -108,10 +108,10 @@ are analogous to the command line options.
 To Generate LaTeX
 -----------------
 
-`md2LaTeX.py` will be installed in your executable paths by `pip`, so this should be runnable from any location.  It is often 
-convenient to do so in the directory that contains the model's .mdzip file, the MyModel.config file, and the directory for LaTeX output.
+`md2LaTeX` will be installed in your executable paths by Python's `setuptools`, so this should be runnable from any location.  It is often 
+convenient to do so while in the directory that contains the model's .mdzip file, the MyModel.config file, and the directory for LaTeX output.
 
-`md2LaTeX.py --config MyModel.config`
+`md2LaTeX --config MyModel.config`
 
 The results will be in the output directories specified in MyModel.config.
 
