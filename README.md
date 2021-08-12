@@ -128,3 +128,66 @@ See the documentation that comes with latexdiff for further details.  `omg_chang
 for convenience.  During normal operation of `makechangebartex.pl` it is created and deleted as needed.
 
 
+To Extend
+=========
+This toolkit is intended to be open to anyone to extend to add support for additional modeling environments, to broaden the availability of authoring an OMG specification process document using the MDSA approach.
+
+Additions will need to emit the LaTeX macros defined in `omg_modelgen.sty`, provided in the MDSA package from OMG. A brief description follows:
+
+omgclass
+--------
+Simple class name
+
+	\omgclass{ClassName}
+
+omggeneralizations
+------------------
+List environment. Generalizations of `ClassName`.
+
+	\begin{omggeneralizations}
+		\item [BaseClassName]
+		...
+	\end{omggeneralizations}
+
+omgassocreq
+-----------
+List environment.  Required associations from `ClassName`.
+	\begin{omgassocreq}
+		\item [assocName : assocTarget {cardinality}] assocName's documentation text
+		...
+	\end{omgassocreq}
+
+omgassocopt
+-----------
+List environment.  Optional associations from `ClassName`.
+	\begin{omgassocopt}
+		\item [assocName : assocTarget {cardinality}] assocName's documentation text
+		...
+	\end{omgassocopt}
+
+omgattrreq
+----------
+List environment.  Required attributes from `ClassName`.
+
+	\begin{omgattrreq}
+		\item [attributeName : attributeType] attributeName's documentation text
+		...
+	\end{omgattrreq}
+
+omgattropt
+----------
+List environment.  Optional attributes from `ClassName`.
+
+	\begin{omgattropt}
+		\item [attributeName : attributeType] attributeName's documentation text
+		...
+	\end{omgattropt}
+
+omgconstraints
+--------------
+List environment.  Constraints on enclosing element.
+
+	\begin{omgconstraints}
+		\item [{constraintName : [constraintExpression]}] constraintName's documentation text
+		...
+	\end{omgconstraints}
