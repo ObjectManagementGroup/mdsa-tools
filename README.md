@@ -152,6 +152,7 @@ List environment. Generalizations of `ClassName`.
 omgassocreq
 -----------
 List environment.  Required associations from `ClassName`.
+
 	\begin{omgassocreq}
 		\item [assocName : assocTarget {cardinality}] assocName's documentation text
 		...
@@ -160,6 +161,7 @@ List environment.  Required associations from `ClassName`.
 omgassocopt
 -----------
 List environment.  Optional associations from `ClassName`.
+
 	\begin{omgassocopt}
 		\item [assocName : assocTarget {cardinality}] assocName's documentation text
 		...
