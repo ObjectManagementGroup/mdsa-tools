@@ -3,7 +3,8 @@ OMG MDSA - TOOLS
 Collection of tools to produce OMG specification process related documents in LaTeX directly from models created in modeling tools.
 
 This is an example of what OMG terms Model-Driven Specification Authoring (MDSA).  The expectation is that this toolkit will grow to 
-incorporate any modeling tool that users or vendors wish to bring into the OMG MDSA environemnt.  
+incorporate any modeling tool that users or vendors wish to bring into the OMG MDSA environment.  
+
 The LaTeX document rendering system gives us a common platform that produces professional results, a text-based system that works well 
 with version control, and gives us the ability to alleviate our authors from the burden of document formatting, letting them focus on 
 the technical aspects of the specifications.
