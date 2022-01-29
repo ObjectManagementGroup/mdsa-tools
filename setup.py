@@ -9,7 +9,7 @@ setup(name='omgmdsa',
       version='0.1',
       description='Support tools for OMG Model-Driven Specification Authoring',
       long_description=readme(),
-      url='https://github.com/ObjectManagementGroup/MDSA.git',
+      url='https://github.com/ObjectManagementGroup/MDSATools.git',
       author='Object Management Group',
       author_email='jason@omg.org',
       license='MIT',
@@ -20,8 +20,8 @@ setup(name='omgmdsa',
       ],
       entry_points = {
           'console_scripts': [
-              'md2latex=latextools.md2latex:main',
-              'makchangebartex=latextools.makechangebartex:main'
+              'md2latex=omgmdsa.md2latex:main',
+              'makchangebartex=omgmdsa.makechangebartex:main'
           ],
       },
       include_package_data=True,
