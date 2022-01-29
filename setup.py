@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 def readme():
     with open('README.md') as f:
@@ -13,7 +13,7 @@ setup(name='omgmdsa',
       author='Object Management Group',
       author_email='jason@omg.org',
       license='MIT',
-      packages=setuptools.find_packages(),
+      packages=find_packages(),
       install_requires=[
           'errutils @ git+https://github.com/jasonmccsmith/errutils',
           'click'
