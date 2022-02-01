@@ -25,5 +25,4 @@ setup(name='omgmdsa',
           ],
       },
       include_package_data=True,
-      include_package_files=True,
       zip_safe=False)
