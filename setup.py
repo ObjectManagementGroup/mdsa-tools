@@ -15,7 +15,7 @@ setup(name='omgmdsa',
       license='MIT',
       packages=find_packages(),
       install_requires=[
-          'errutils @ git+https://github.com/jasonmccsmith/errutils',
+          'errutils @ git+https://github.com/jasonmccsmith/errutils.git',
           'click'
       ],
       entry_points = {
