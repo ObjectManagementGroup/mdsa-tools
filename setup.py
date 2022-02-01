@@ -21,7 +21,7 @@ setup(name='omgmdsa',
       entry_points = {
           'console_scripts': [
               'md2latex=omgmdsa.md2latex:main',
-              'makchangebartex=omgmdsa.makechangebartex:main'
+              'makechangebartex=omgmdsa.makechangebartex:main'
           ],
       },
       include_package_data=True,
