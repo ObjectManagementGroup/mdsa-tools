@@ -69,9 +69,11 @@ if __name__ == '__main__':
     debugGroup = parser.add_argument_group('Debug', 'Commands to assist debugging')
     debugGroup.add_argument('--verbose', default=False, action='store_true')
     debugGroup.add_argument('--debug', default=False, action='store_true')
+    debugGroup.add_argument('--test', default=False, action='store_true')
     parser.add_argument("--setupFile", default="")
     parser.add_argument("--host", default="")
     parser.add_argument("--port", default="")
+    parser.add_argument("--lookup", default="")
     
     args = parser.parse_args()
 
@@ -79,21 +81,34 @@ if __name__ == '__main__':
         print("Error, must provide either --setupFile or --host / --port")
         exit(-1)
 
-    print ("Reading LaTeX file for data")    
-    setup = LaTeXFileSpecSetup(args.setupFile)
-    print ("specacro = " + setup.specacro)
-    print (setup.__dict__)
+    if args.test:
+        print ("Reading LaTeX file for data")    
+        setup = LaTeXFileSpecSetup(args.setupFile)
+        print ("specacro = " + setup.specacro)
+        print (setup.__dict__)
 
-    print ("Creating DBSpecSetup - UNIMPLEMENTED")
-    setup2 = DBSpecSetup(args.host, args.port)
+        print ("Creating DBSpecSetup - UNIMPLEMENTED")
+        setup2 = DBSpecSetup(args.host, args.port)
 
-    print ("Copying parsed LaTeX setup to empty DBSpecSetup")
-    setup.copyTo(setup2)
-    print ("Writing to DB - UNIMPLEMENTED")
-    setup2.write(args.host, args.port)
-    print(setup.__dict__)
+        print ("Copying parsed LaTeX setup to empty DBSpecSetup")
+        setup.copyTo(setup2)
+        print ("Writing to DB - UNIMPLEMENTED")
+        setup2.write(args.host, args.port)
+        print(setup.__dict__)
 
-    print ("Copying parsed LaTeX setup to another LaTeX setup, then writing to 'foo.txt'")
-    setup3 = LaTeXFileSpecSetup()
-    setup.copyTo(setup3)
-    setup3.write("foo.txt")
+        print ("Copying parsed LaTeX setup to another LaTeX setup, then writing to 'foo.txt'")
+        setup3 = LaTeXFileSpecSetup()
+        setup.copyTo(setup3)
+        setup3.write("foo.txt")
+
+    setup = None 
+
+    if args.setupFile != "":
+        setup = LaTeXFileSpecSetup(args.setupFile)
+    else:
+        setup = DBSpecSetup(args.host, args.port)
+    
+    if args.lookup != "":
+        print(setup.get(args.lookup))
+        exit(0)
+    
