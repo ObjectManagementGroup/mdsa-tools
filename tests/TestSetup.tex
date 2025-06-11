@@ -1,0 +1,184 @@
+%%% This file is for setting the data used in the template
+%%% It is intended that this file will be automatically generated in the future
+%%%%%%%  DO NOT ADD ANYTHING ELSE TO THIS FILE
+%%%%%%%  Use Submission_AuthorSettings.tex for any additional features you wish to add
+
+%%% Specification name, and acronym
+%%% The title of your document will be built from this information.
+% \setvalue{\specname}{Specification Name Placeholder}
+% \setvalue{\specacro}{Specification Abbreviation}
+% \setvalue{\version}{1.0}
+\setvalue{\specname}{Simplified Electronic Notation for Sensor Reporting}
+\setvalue{\specacro}{SENSR}
+\setvalue{\version}{1.0}
+
+%%% Specification 'phase'
+\setboolean{betaOrFinal}{true}
+
+
+%%% Titles
+% If you wish to set a subtitle (reason for document, etc), do so here.
+\setvalue{\subtitle}{}%Submission to ManTIS TF in Response to SENSR RFP (mantis/18-09-10)}
+
+
+%%% Authorship
+% \setvaluelist{\submitters}{{A, Inc.},{B, Inc.},{C, LLC},{D}}
+% \setvalue{\leadsubmitter}{B, Inc.}
+% \setvaluelist{\contributors}{{L, Inc.},{M Corp.},{N, PLLC}}
+% \setvaluelist{\supporters}{{X, Inc.},{Y, LLC},{Z}}
+% \setvalue{\pdfauthor}{Object Management Group}
+\setvalue{\leadsubmitter}{Bosch Software Innovations, GmbH}
+\setvaluelist{\submitters}{
+    {Bosch Software Innovations, GmbH},
+    {Elemental Reasoning, LLC}
+}
+\setvaluelist{\contributors}{}
+\setvaluelist{\supporters}{}
+% xxxxx with contact info
+% For each of the above lists that you set, also set the contact info with the following format for each organization listed:
+%    {Company Name\\ Contact Name\\ \href(mailto:contact@company.com}{contact@company.com}}
+% If you set a list to empty above, set its corresponding list here to empty
+\setvaluelist{\submitterswithcontactinfo}{
+    {   Bosch Software Innovations, GmbH\\
+        Dr. Axel Cordes\\
+        \href{mailto:Axel.Cordes@de.bosch.com}{Axel.Cordes@de.bosch.com}
+    },
+    {   Elemental Reasoning, LLC\\ 
+        Dr. Jason McC. Smith\\
+        \href{mailto:jason@elementalreasoning.com}{jason@elementalreasoning.com}
+    }
+}
+\setvaluelist{\contributorswithcontactinfo}{}
+\setvaluelist{\supporterswithcontactinfo}{}
+
+% Author of the PDF content
+\setvalue{\pdfauthor}{Jason McC. Smith}
+
+%%% Date of document submission
+% Use \today to keep the current date, or set manually if you like.
+% Recommended to set this to the {month year} of the TC meeting where
+% it is presented / accepted.  Remember to spell out the entire month, and 
+% use a four digit year.  "December 2019" not "Dec '19" or even "Dec 2019".
+\setvalue{\subdate}{March 2022}
+
+%%% Document numbers and auxilliary documents
+% \setvalue{\docnum}{mantis/19-12-01}
+\setvalue{\docnum}{dtc/2022-03-14}
+%%% When setting this, use the format of {TF/YY-MM-nn \> Document Title}  The '\>' is a tabulating mark.  It is used in forming the titlepage.
+\setvaluelist{\otherdocnums}{}
+\setvaluelist{\associateddocs}{
+    {mantis/19-12-04 \> SENSR XMI}
+}
+\setvaluelist{\ancillarydocs}{
+    {mantis/19-12-03 \> SENSR (Changebar)}
+}
+\setvaluelist{\iris}{}%{https://www.omg.org/spec/SENSR/1.0}, {https://www.omg.org/spec/SENSR/20190901}}
+
+
+%%% iprmode can take one of three values: rand, rflimited or nonassert
+% \setvalue{\iprmode}{nonassert}
+\setvalue{\iprmode}{nonassert}
+
+
+
+
+% \setvaluelist{\authors}{
+%     {88solutions Corporation},
+%     {Adaptive, Inc.},
+%     {Model-Driven Solutions},
+%     {Thematix, LLC}
+% }
+
+% \setvaluelist{\submitters}{
+%     {
+%         {88solutions Corporation},%
+%         {%
+%             {{Mr. Manfred Koethe},{koethe@88solutions.com}}%
+%         }%
+%     },%
+%     {%
+%         {Adaptive, Inc.},%
+%         {
+%             {{Mr. Pete Rivett},{pete.rivett@adaptive.com}}%
+%         }
+%     },
+%     {
+%         {Model-Driven Solutions},
+%         {
+%             {{Mr. Tom Digre},{tom-d@modeldriven.com}},
+%             {{Mr. Cory Casanave},{cory-c@modeldriven.com}}
+%         }
+%     },
+%     {
+%         {Thematix, LLC},
+%         {
+%             {{Ms. Elisa Kendall},{ekendall@thematix.com}}
+%         }
+%     }
+% }
+
+% \setvaluelist{\submitters}{
+%     {
+%         company={88solutions Corporation},%
+%         contacts={%
+%             {contact={Mr. Manfred Koethe}, email={koethe@88solutions.com}}%
+%         }%
+%     },%
+%     {%
+%         company={Adaptive, Inc.},%
+%         contacts={
+%             {contact={Mr. Pete Rivett},email={pete.rivett@adaptive.com}}%
+%         }
+%     },
+%     {
+%         company={Model-Driven Solutions},
+%         contacts={
+%             {contact={Mr. Tom Digre},email={tom-d@modeldriven.com}},
+%             {contact={Mr. Cory Casanave},email={cory-c@modeldriven.com}}
+%         }
+%     },
+%     {
+%         company={Thematix, LLC},
+%         contacts={
+%             {contact={Ms. Elisa Kendall},email={ekendall@thematix.com}}
+%         }
+%     }
+% }
+% \setvaluelist{\submitters}{
+%     {
+%         {8},
+%         {
+%             {{MK},{k@}}
+%         }
+%     },
+%     {
+%         {A},
+%         {
+%             {{PR},{pr@}}
+%         }
+%     },
+%     {
+%         {M},
+%         {
+%             {{TD},{td@}},
+%             {{CC},{cc@}}
+%         }
+%     },
+%     {
+%         {T},
+%         {
+%             {{EK},{ek@}}
+%         }
+%     }
+% }
+
+
+% \setvaluelist{\supporters}{
+%     {
+%         {International Business Machines},
+%         {
+%             {{Mr. Sridhar Iyengar},{siyengar@us.ibm.com}}
+%         }
+%     }
+% }
+
