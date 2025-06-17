@@ -63,7 +63,7 @@ imageFormat = svg
         #         self.modelFile =
         
         if self.outputDir == "":
-            self.outputDir = os.path.join(os.path.dirname(self.modelFile), self.specName + "Submission", "GeneratedContent")
+            self.outputDir = os.path.join(os.path.dirname(self.modelFile), self.specName + "Specification", "GeneratedContent")
         else:
             self.outputDir = os.path.realpath(self.outputDir)
         
