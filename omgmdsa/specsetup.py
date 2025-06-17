@@ -15,7 +15,7 @@ class SpecSetup:
     def __init__(self):
         self.fields = ['specacro', 'specname', 'version', 'subtitle', 'docnum', 'subdate']
         for field in self.fields:
-            self.__dict__[field] = "NOT SET"
+            self.__dict__[field] = "NOTSET"
     
     def get(self, field):
         return self.__dict__[field]
