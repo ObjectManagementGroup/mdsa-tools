@@ -198,7 +198,7 @@ def main():
     
     if args.model == "":
         logger.error("--model is a required flag, please provide a model file to convert")
-        exit(0)
+        exit(1)
     
     if type(args.pkgs) == str:
         # Came from config file, need to convert to list
