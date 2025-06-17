@@ -8,7 +8,7 @@ The LaTeX document rendering system gives us a common platform that produces pro
 
 Primary deployment platform is assumed to be a Unix variant (Linux, macOS, etc) but may work on Windows with proper configuration.
 
-There are currently two tools:
+There are currently three tools:
 
 * `md2LaTeX.py`
 
@@ -28,6 +28,9 @@ There are currently two tools:
 	
 	  May be needed in some situations. Fixes up file path macros used by OMG system. Not for regular expected use.
 
+* `specsetup.py`
+
+  Used by the mdsa-omg-spec template to extract information from Specification_Setup.tex. In the future, will also be able to retrieve this information from an OMG-hosted DB when workflows are unified. Not for general end-user use.
 
 To Install
 ==========
