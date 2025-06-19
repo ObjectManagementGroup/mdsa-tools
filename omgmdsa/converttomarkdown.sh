@@ -8,6 +8,7 @@
 # if there are still any of the core tex files in the directory.
 
 mkdir -p ./archivedTex
+# cp ./mdsa-omg-core/omgLaTeX.yaml .    # We'll get there eventually...
 for file in ./[0-9A]*.tex; do
     filesize=$(du -k "${file}" | cut -f1)
     target="${file%.tex}.md"
