@@ -30,14 +30,13 @@ There are currently three tools:
 
 * `specsetup.py`
 
-  Used by the mdsa-omg-spec template to extract information from Specification_Setup.tex. In the future, will also be able to retrieve this information from an OMG-hosted DB when workflows are unified. Not for general end-user use.
+  Used by the mdsa-omg-{rfp,spec} templates to extract information from _RFP_Setup.tex and _Specification_Setup.tex. In the future, will also be able to retrieve this information from an OMG-hosted DB when workflows are unified. Not for general end-user use.
 
 To Install
 ==========
-1. Clone this repository from github: `git clone https://github.com/ObjectManagementGroup/MDSATools.git`
+1. Clone this repository from github: `git clone https://github.com/ObjectManagementGroup/mdsa-tools.git`
+2. Change directory into your clone and run `python setup.py install`
 2. Install contents of `./MDSATools/md2LaTeX-templates/` folder into MagicDraw as Report templates as per MagicDraw documentation for ReportWizard
-
-If you want to install most simply, `cd MDSATools; python setup.py` and it will take care of the dependencies, and create a proper executable wrapper around each of the tools for you.
 
 If you want to evoke the scripts more manually, you will need to install two modules into Python: click, and errutils.  Click is available via pip, and errutils can be obtained from https://github.com/jasonmccsmith/errutils .
 
