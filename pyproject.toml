@@ -1,3 +1,31 @@
+[project]
+name = "mdsa-tools"
+version = "1.0"
+description = "OMG MDSA Support Tools"
+license = {text = "BSD-3"}
+readme = "README.md"
+authors = [{name = "OMG", email="editor@omg.org"}]
+keywords = [
+]
+dependencies = [
+    'errutils @ git+https://github.com/jasonmccsmith/errutils.git',
+    'click'
+]
+packages=find_packages()
+include_package_data=True
+
+[project.urls]
+Repository = "https://github.com/ObjectManagementGroup/mdsa-tools.git"
+Issues = "https://github.com/ObjectManagementGroup/mdsa-tools/issues"
+
+[project.optional-dependencies]
+
+[project.scripts]
+'md2latex'='omgmdsa.md2latex:main'
+'makechangebartex'='omgmdsa.makechangebartex:main'
+'specsetup'='omgmdsa.specsetup:main'
+
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
