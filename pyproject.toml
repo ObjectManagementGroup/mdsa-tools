@@ -11,8 +11,6 @@ dependencies = [
     'errutils @ git+https://github.com/jasonmccsmith/errutils.git',
     'click'
 ]
-packages=find_packages()
-include_package_data=True
 
 [project.urls]
 Repository = "https://github.com/ObjectManagementGroup/mdsa-tools.git"
