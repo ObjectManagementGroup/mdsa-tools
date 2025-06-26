@@ -50,7 +50,7 @@ class LaTeXFileSpecSetup (SpecSetup):
             setup.write("%%%%\n")
             setup.write("\n")
             for field in self.fields:
-                setup.write("\setvalue\{" + field + "}{" + self.__dict__[field] + "}\n")
+                setup.write("\\setvalue\\{" + field + "}{" + self.__dict__[field] + "}\n")
         
 class DBSpecSetup(SpecSetup):
     """A SpecSetup that is read from or written to a database"""
