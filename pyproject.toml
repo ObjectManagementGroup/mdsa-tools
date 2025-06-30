@@ -1,5 +1,5 @@
 [project]
-name = "mdsa-tools"
+name = "omgmdsa"
 version = "1.0"
 description = "OMG MDSA Support Tools"
 license = {text = "BSD-3"}
@@ -27,3 +27,6 @@ Issues = "https://github.com/ObjectManagementGroup/mdsa-tools/issues"
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]

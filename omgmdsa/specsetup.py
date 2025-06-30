@@ -61,9 +61,7 @@ class DBSpecSetup(SpecSetup):
     def write(self, host, port):
         print ("DBSpecSetup not yet implemented")
     
-
-
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description='Test script to exercise SpecSetup subclasses for LaTeX files and DB storage')
     # Debugging and testing
     debugGroup = parser.add_argument_group('Debug', 'Commands to assist debugging')
@@ -112,3 +110,6 @@ if __name__ == '__main__':
         print(setup.get(args.lookup))
         exit(0)
     
+
+if __name__ == '__main__':
+    main()
