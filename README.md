@@ -35,10 +35,8 @@ There are currently three tools:
 To Install
 ==========
 1. Clone this repository from github: `git clone https://github.com/ObjectManagementGroup/mdsa-tools.git`
-2. Change directory into your clone and run `python setup.py install`
-2. Install contents of `./MDSATools/md2LaTeX-templates/` folder into MagicDraw as Report templates as per MagicDraw documentation for ReportWizard
-
-If you want to evoke the scripts more manually, you will need to install two modules into Python: click, and errutils.  Click is available via pip, and errutils can be obtained from https://github.com/jasonmccsmith/errutils .
+2. Change directory into your clone and run `pip install -e .`
+2. Install contents of `./generators/MagicDraw/md2LaTeX-templates/` folder into MagicDraw as Report templates as per MagicDraw documentation for ReportWizard
 
 Of course, these tools are of little use without at least one supported modeling tool, and a recent LaTeX installation for producing a changebar version.
 
